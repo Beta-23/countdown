@@ -87,6 +87,20 @@ input {
 	font-family: Nunito, sans-serif;
 }
 
+/* Button */
+button {
+	width: 100%;
+	height: 40px;
+	border-radius: 20px;
+	margin-top: 15px;
+	border: none;
+	text-transform: uppercase;
+	background: #006959;
+	color: white;
+	cursor: pointer;
+	outline: none;
+}
+
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
 	.video-background {
