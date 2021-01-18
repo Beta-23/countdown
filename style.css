@@ -95,10 +95,14 @@ button {
 	margin-top: 15px;
 	border: none;
 	text-transform: uppercase;
-	background: #006959;
+	background: #a4d309;
 	color: white;
 	cursor: pointer;
 	outline: none;
+}
+
+button:hover {
+	filter: brightness(110%);
 }
 
 /* Media Query: Large Smartphone (Vertical) */
