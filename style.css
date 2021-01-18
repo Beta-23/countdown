@@ -59,6 +59,13 @@ h1 {
 	text-align: center;
 	margin-top: 0;
 	margin-bottom: 10px;
+	color: whitesmoke;
+}
+
+label {
+	font-weight: bold;
+	margin-left: 10px;
+	color: whitesmoke;
 }
 
 /* Media Query: Large Smartphone (Vertical) */
