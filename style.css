@@ -123,4 +123,19 @@ button:hover {
 		padding: 20px;
 		margin: 10px;
 	}
+	.input-container {
+		top: unset;
+	}
+
+	.form {
+		width: unset;
+	}
+
+	input {
+		width: 93%;
+	}
+
+	h1 {
+		font-size: 20px;
+	}
 }
