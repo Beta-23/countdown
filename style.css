@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 html {
 	box-sizing: border-box;
 }
@@ -8,6 +10,7 @@ body {
 	overflow-y: hidden;
 	display: flex;
 	align-items: center;
+	font-family: Nunito, sans-serif;
 }
 
 /* Video Background */
@@ -49,6 +52,59 @@ video {
 	background-color: rgba(10, 10, 10, 0.85);
 }
 
+.input-container {
+	position: relative;
+	top: 20px;
+}
+
+h1 {
+	font-size: 35px;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 10px;
+	color: whitesmoke;
+}
+
+/* Form */
+.form {
+	width: 480px;
+}
+
+label {
+	font-weight: bold;
+	margin-left: 10px;
+	color: whitesmoke;
+}
+
+input {
+	width: 95%;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	background: #fff;
+	outline: none;
+	font-family: Nunito, sans-serif;
+}
+
+/* Button */
+button {
+	width: 100%;
+	height: 40px;
+	border-radius: 20px;
+	margin-top: 15px;
+	border: none;
+	text-transform: uppercase;
+	background: #a4d309;
+	color: white;
+	cursor: pointer;
+	outline: none;
+}
+
+button:hover {
+	filter: brightness(110%);
+}
+
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
 	.video-background {
@@ -59,5 +115,12 @@ video {
 		object-fit: cover;
 		object-position: 60%;
 		margin-top: -1px;
+	}
+	.container {
+		min-width: unset;
+		width: 95vw;
+		min-height: 245px;
+		padding: 20px;
+		margin: 10px;
 	}
 }
