@@ -49,6 +49,11 @@ video {
 	background-color: rgba(10, 10, 10, 0.85);
 }
 
+.input-container {
+	position: relative;
+	top: 20px;
+}
+
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
 	.video-background {
