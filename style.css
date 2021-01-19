@@ -146,6 +146,11 @@ li span {
 		top: unset;
 	}
 
+	.countdown {
+		position: relative;
+		top: 10px;
+	}
+
 	.form {
 		width: unset;
 	}
@@ -156,5 +161,13 @@ li span {
 
 	h1 {
 		font-size: 20px;
+	}
+
+	li {
+		font-size: 15px;
+	}
+
+	li span {
+		font-size: 40px;
 	}
 }
