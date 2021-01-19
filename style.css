@@ -105,6 +105,54 @@ button:hover {
 	filter: brightness(110%);
 }
 
+/* Countdown */
+ul {
+	margin-left: -45px;
+}
+
+li {
+	display: inline-block;
+	font-size: 30px;
+	list-style-type: none;
+	padding: 10px;
+	text-transform: uppercase;
+	color: whitesmoke;
+}
+
+li span {
+	display: block;
+	font-size: 80px;
+	text-align: center;
+}
+
+/* Complete */
+.complete {
+	position: relative;
+	top: 60px;
+}
+
+.complete-title {
+	animation: complete 4s infinite;
+}
+
+@keyframes complete {
+	0% {
+		color: rgb(233, 13, 13);
+	}
+	25% {
+		color: rgb(233, 211, 13);
+	}
+	50% {
+		color: rgb(64, 233, 13);
+		transform: scale(1.5);
+	}
+	75% {
+		color: rgb(33, 66, 251);
+	}
+	100% {
+		color: rgb(181, 16, 231);
+	}
+}
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
 	.video-background {
@@ -127,6 +175,11 @@ button:hover {
 		top: unset;
 	}
 
+	.countdown {
+		position: relative;
+		top: 10px;
+	}
+
 	.form {
 		width: unset;
 	}
@@ -137,5 +190,13 @@ button:hover {
 
 	h1 {
 		font-size: 20px;
+	}
+
+	li {
+		font-size: 10px;
+	}
+
+	li span {
+		font-size: 40px;
 	}
 }
