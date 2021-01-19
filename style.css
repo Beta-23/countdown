@@ -105,6 +105,25 @@ button:hover {
 	filter: brightness(110%);
 }
 
+/* Countdown */
+ul {
+	margin-left: -45px;
+}
+
+li {
+	font-size: 30px;
+	list-style-type: none;
+	padding: 10px;
+	text-transform: uppercase;
+	color: whitesmoke;
+}
+
+li span {
+	display: block;
+	font-size: 80px;
+	text-align: center;
+}
+
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
 	.video-background {
