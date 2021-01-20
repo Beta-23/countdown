@@ -5,6 +5,8 @@ const dateEl = document.getElementById('date-picker');
 
 let countdownTitle = '';
 let countdownDate = '';
+let countdownValue = Date;
+let savedCountdown;
 
 // Set Date Input Min & Value with Today's Date and ISOS date format
 const today = new Date().toISOString().split('T')[0];
@@ -16,7 +18,18 @@ function updateCountdown(e) {
     // Set title and date, save to localStorage
     countdownTitle = e.srcElement[0].value;
     countdownDate = e.srcElement[1].value;
-    console.log(countdownTitle, countdownDate)
+    savedCountdown = {
+        title: countdownTitle,
+        date: countdownDate,
+    };
+    localStorage.setItem('countdown', JSON.stringify(savedCountdown));
+    // Check if no date entered
+    if (countdownDate === '') {
+        alert('Please select a date for the countdown.');
+    } else {
+        // Get number version of current Date
+        countdownValue = new Date(countdownDate).getTime();
+    } 
 }
 
 // Event Listener
