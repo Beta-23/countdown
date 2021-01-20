@@ -13,7 +13,10 @@ dateEl.setAttribute('min', today);
 // Take values from Form input
 function updateCountdown(e) {
     e.preventDefault();
-    console.log(e)
+    // Set title and date, save to localStorage
+    countdownTitle = e.srcElement[0].value;
+    countdownDate = e.srcElement[1].value;
+    console.log(countdownTitle, countdownDate)
 }
 
 // Event Listener
