@@ -10,7 +10,6 @@ const timeElements = document.querySelectorAll('span');
 let countdownTitle = '';
 let countdownDate = '';
 let countdownValue = Date;
-let savedCountdown;
 
 const second = 1000;
 const minute = second * 60;
@@ -23,7 +22,6 @@ dateEl.setAttribute('min', today);
 
 // Populate Countdown / Complete UI
 function updateDOM() {
-  
     const now = new Date().getTime();
     const distance = countdownValue - now;
     const days = Math.floor(distance / day);
@@ -51,19 +49,10 @@ function updateCountdown(e) {
     // Set title and date, save to localStorage
     countdownTitle = e.srcElement[0].value;
     countdownDate = e.srcElement[1].value;
-    savedCountdown = {
-        title: countdownTitle,
-        date: countdownDate,
-    };
-    localStorage.setItem('countdown', JSON.stringify(savedCountdown));
-    // Check if no date entered
-    if (countdownDate === '') {
-        alert('Please select a date for the countdown.');
-    } else {
-        // Get number version of current Date, updateDOM
-        countdownValue = new Date(countdownDate).getTime();
-        updateDOM();
-    } 
+    console.log(countdownTitle, countdownDate)
+    // Get number version of current Date, updateDOM
+    countdownValue = new Date(countdownDate).getTime();
+    updateDOM();
 }
 
 // Event Listener
