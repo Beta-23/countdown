@@ -62,12 +62,29 @@ function updateCountdown(e) {
     countdownTitle = e.srcElement[0].value;
     countdownDate = e.srcElement[1].value;
     console.log(countdownTitle, countdownDate)
-    // Get number version of current Date, updateDOM
-    countdownValue = new Date(countdownDate).getTime();
-    updateDOM();
+    // Check if no date entered
+    if (countdownDate === '') {
+        alert('Please select a valid date to countdown.');
+    } else {
+        // Get number version of current Date, updateDOM
+        countdownValue = new Date(countdownDate).getTime();
+        updateDOM();
+    }
+}
+
+function reset() {
+    // Hide countdowns, show input form
+    countdownEl.hidden = true;
+    inputContainer.hidden = false;
+    // Stop the countdown
+    clearInterval(countdownActive);
+    // Reset values, remove localStorage item
+    countdownTitle = '';
+    countdownDate = '';
 }
 
 // Event Listener
 countdownForm.addEventListener('submit', updateCountdown);
+countdownBtn.addEventListener('click', reset);
 
 
