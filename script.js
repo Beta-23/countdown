@@ -63,9 +63,12 @@ function updateCountdown(e) {
     countdownDate = e.srcElement[1].value;
     console.log(countdownTitle, countdownDate)
     // Check if no date entered
-    if (countdownDate === '') {
+    if (countdownTitle === '') {
+        alert('Please enter valid title for your countdown.');
+    } else if (countdownDate === '') {
         alert('Please select a valid date to countdown.');
-    } else {
+    }
+    else {
         // Get number version of current Date, updateDOM
         countdownValue = new Date(countdownDate).getTime();
         updateDOM();
