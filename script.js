@@ -15,6 +15,7 @@ let countdownTitle = '';
 let countdownDate = '';
 let countdownValue = Date;
 let countdownActive;
+let savedCountdown;
 
 const second = 1000;
 const minute = second * 60;
@@ -62,6 +63,11 @@ function updateCountdown(e) {
     countdownTitle = e.srcElement[0].value;
     countdownDate = e.srcElement[1].value;
     console.log(countdownTitle, countdownDate)
+    savedCountdown = {
+        title: countdownTitle,
+        date: countdownDate,
+    };
+    console.log(savedCountdown)
     // Check if no date entered
     if (countdownTitle === '') {
         alert('Please enter valid title for your countdown.');
