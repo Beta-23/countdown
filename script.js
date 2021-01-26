@@ -67,7 +67,7 @@ function updateCountdown(e) {
         title: countdownTitle,
         date: countdownDate,
     };
-    console.log(savedCountdown)
+    localStorage.setItem('countdown', savedCountdown);
     // Check if no date entered
     if (countdownTitle === '') {
         alert('Please enter valid title for your countdown.');
