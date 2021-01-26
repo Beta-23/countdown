@@ -92,6 +92,7 @@ function reset() {
     countdownTitle = '';
     countdownDate = '';
     localStorage.removeItem('countdown');
+    location.reload();
 }
 
 function restorePreviousCountdown() {
